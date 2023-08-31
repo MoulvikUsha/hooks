@@ -14,11 +14,11 @@ const reducer = (state, action) => {
     }
 }
 function UseReduce() {
-    const [count, dispatch] = useReducer(reducer, inititalState)
+    const [state, dispatch] = useReducer(reducer, inititalState)
     return (
         <>
             <div className='countButtons'>
-                <p>Count = {count}</p>
+                <p>Count = {state}</p>
                 <button className='btn btn-light' onClick={() => dispatch('increment')}>Increment</button>
                 <button className='btn btn-light' onClick={() => dispatch('reset')}>Reset</button>
                 <button className='btn btn-light' onClick={() => dispatch('decrement')}>Decrement</button>

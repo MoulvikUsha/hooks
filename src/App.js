@@ -31,12 +31,12 @@ function App() {
         </ChannelContext.Provider>
       </UserContext.Provider> */}
       {/* <UseReduce /> */}
-      {/* <UseReducer2 /> */}
+      <UseReducer2 />
       {/* <DataFetch /> */}
       {/* <DataFetchReducer /> */}
       {/* <Parent /> */}
       {/* <FocusInput /> */}
-      <ClassTimer />
+      {/* <ClassTimer /> */}
     </div>
   );
 }

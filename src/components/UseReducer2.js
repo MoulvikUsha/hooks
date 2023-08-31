@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 
-const inititalState = {
+const initialState = {
     firstCounter: 0
 }
 const reducer = (state, action) => {
@@ -10,17 +10,17 @@ const reducer = (state, action) => {
         case 'decrement':
             return {firstCounter: state.firstCounter - action.value}
         case 'reset':
-            return inititalState
+            return initialState
         default:
             return state
     }
 }
 function UseReducer2() {
-    const [count, dispatch] = useReducer(reducer, inititalState)
+    const [state, dispatch] = useReducer(reducer, initialState)
     return (
         <>
             <div className='countButtons'>
-                <p>Count = {count.firstCounter}</p>
+                <p>Count = {state.firstCounter}</p>
                 <button className='btn btn-light' onClick={() => dispatch({ type: 'increment', value: 1 })}>Increment</button>
                 <button className='btn btn-light' onClick={() => dispatch({ type: 'reset' })}>Reset</button>
                 <button className='btn btn-light' onClick={() => dispatch({ type: 'decrement', value: 1 })}>Decrement</button>
